@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Event Photos</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Crect x=%272%27 y=%276%27 width=%2720%27 height=%2715%27 rx=%273%27 fill=%27%23e9b44c%27/%3E%3Cpath d=%27M8 6l1.5-3h5L16 6%27 fill=%27%23e9b44c%27/%3E%3Ccircle cx=%2712%27 cy=%2713.5%27 r=%274%27 fill=%27%23111%27/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="show">
+
+  <div class="stage" id="stage">
+    <div class="layer"><div class="blur"></div><img alt=""></div>
+    <div class="layer"><div class="blur"></div><img alt=""></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1 data-event-name>Event Photos</h1>
+      <p data-subtitle></p>
+    </div>
+    <a class="btn" href="gallery.html" title="See all photos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <span>All photos</span>
+    </a>
+  </header>
+
+  <nav class="controls" aria-label="Slideshow controls">
+    <button class="icon-btn" id="prev" title="Previous (←)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="icon-btn big" id="play" title="Pause (space)">
+      <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+      <span class="visually-hidden">Play or pause</span>
+    </button>
+    <button class="icon-btn" id="next" title="Next (→)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <span class="sep"></span>
+    <a class="icon-btn" id="download" href="#" download title="Download this photo (D)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+      <span class="visually-hidden">Download this photo</span>
+    </a>
+    <button class="icon-btn" id="fullscreen" title="Full screen (F)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      <span class="visually-hidden">Full screen</span>
+    </button>
+  </nav>
+
+  <div class="progress"><span id="bar"></span></div>
+  <div class="toast" id="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="photos.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/slideshow.js"></script>
+</body>
+</html>

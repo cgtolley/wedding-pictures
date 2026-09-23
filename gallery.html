@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Event Photos</title>
+  <meta name="theme-color" content="#0f0f11">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Crect x=%272%27 y=%276%27 width=%2720%27 height=%2715%27 rx=%273%27 fill=%27%23e9b44c%27/%3E%3Cpath d=%27M8 6l1.5-3h5L16 6%27 fill=%27%23e9b44c%27/%3E%3Ccircle cx=%2712%27 cy=%2713.5%27 r=%274%27 fill=%27%23111%27/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header class="g-header">
+    <div>
+      <h1 data-event-name>Event Photos</h1>
+      <p class="meta"><span data-subtitle></span><span id="count"></span></p>
+    </div>
+    <div class="g-actions">
+      <a class="btn" href="index.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+        Slideshow
+      </a>
+      <a class="btn" id="fullres" href="#" target="_blank" rel="noopener" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        Full-res originals
+      </a>
+      <button class="btn primary" id="zip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        <span id="zip-label">Download all</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="grid" id="grid"></main>
+  <p class="g-footer">Tap any photo to view it large and download it.</p>
+
+  <div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div class="lb-top">
+      <span class="lb-count" id="lb-count"></span>
+      <div class="right">
+        <a class="icon-btn" id="lb-dl" href="#" download title="Download (D)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          <span class="visually-hidden">Download</span>
+        </a>
+        <button class="icon-btn" id="lb-close" title="Close (Esc)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          <span class="visually-hidden">Close</span>
+        </button>
+      </div>
+    </div>
+    <div class="lb-img"><img id="lb-img" alt=""></div>
+    <button class="icon-btn big lb-nav lb-prev" id="lb-prev" title="Previous (←)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="icon-btn big lb-nav lb-next" id="lb-next" title="Next (→)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="photos.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/gallery.js"></script>
+</body>
+</html>
