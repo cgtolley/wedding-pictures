@@ -240,3 +240,14 @@ body.idle { cursor: none; }
   .lb-prev { left: 16px; }
   .lb-next { right: 16px; }
 }
+/* ---------- Light sage theme (gallery page) ---------- */
+body:not(.show) {
+  --bg: #DDE5D6;                       /* page background */
+  --fg: #1F2A1E;                       /* dark green-black text */
+  --muted: #5B6858;                    /* secondary text */
+  --line: rgba(31, 42, 30, 0.14);      /* button borders */
+}
+body:not(.show) .btn { background: rgba(255, 255, 255, 0.55); }
+body:not(.show) .btn:hover { background: rgba(255, 255, 255, 0.85); }
+body:not(.show) .tile { background: #CBD6C3; }  /* shown while thumbnails load */
+body:not(.show) .lightbox { --fg: #F5F2EC; --muted: #A8A29A; }  /* keep the photo viewer dark */
